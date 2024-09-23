@@ -7,15 +7,17 @@ function CharacterCard({ character }) {
 	const formattedDate = new Date(created).toLocaleDateString();
 
 	return (
-		<Card>
+		<Card
+			cover={<img alt={name} src={image} />}
+		>
 			<Meta
 				title={name}
 				description={
 					<>
-						<Text strong>Species: {species}</Text><br/>
-						<Text strong>Status: {status}</Text><br/>
-						<Text strong>Gender: {gender}</Text><br/>
-						<Text strong>Created: {formattedDate}</Text><br/>
+						<Text>Species: {species}</Text><br/>
+						<Text>Status: {status}</Text><br/>
+						<Text>Gender: {gender}</Text><br/>
+						<Text>Created: {formattedDate}</Text><br/>
 					</>
 				}
 			/>
